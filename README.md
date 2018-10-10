@@ -26,9 +26,19 @@ The following wireframes show a high-level representation of the content and use
 
 ## API
 
+### Search Cards
+
 ```
 curl "https://search.moonpig.com/api/products?size=12&searchFacets=occasion_level_3:occasion%3Ewell%20done%3Enew%20job"
 ```
+
+### View Card
+
+```
+curl "https://www.moonpig.com/uk/api/product/product/?mpn=pu1162&defaultSizeId=1"
+```
+
+> Note: replace pu1162 with the variable MoonpigProductNo from the first API call
 
 ## Tools, libraries and frameworks
 
