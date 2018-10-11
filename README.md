@@ -3,26 +3,25 @@
 
 # Frontend Technical Challenge
 
-## Brief
+We've been asked to rebuild the Moonpig website using the latest best practices and you are part of a team working on the proof of concept. We'd like you to build out a simple page which will display a list of cards that a customer can buy using our API.
 
-We've been asked to rebuild the moonpig website using the latest best practices and you are part of a team working on the proof of concept, we'd like you to build out a simple page which will display a list of cards that a customer can buy using our API.
-
-It should meet the following use cases
+It should meet the following use cases:
 
 > As a customer I can view a list of availble cards on my mobile, tablet and desktop so that I can celebrate my new job
 
-> As a customer I can view a more details of a card so that I can decide it's the right card for me before purchase
+> As a customer I can view more details of a card so that I can decide it's the right card for me before purchase
 
 ## Wireframes
 
-The following wireframes show a high-level representation of the content and user flow - we encourage you to go above and beyond what is presented, demonstrating your UX/UI as well as coding skills:
+### Card Listings Page
 
-### Main Page
-![alt text](img/wireframe1.png "Moonpig")
+![Card listings page wireframe](img/wireframe1.png "Card listings page wireframe")
 
-### Card Detail Page
+### Card Details Page
 
-![alt text](img/wireframe2.png "Moonpig")
+![Card details page wireframe](img/wireframe2.png "Card details page wireframe")
+
+Possible ideas for extension are the ability to search, routing, pagination, responsive images and animation. However, doing less "well" is preferable to doing more "less well" 😉. We also appreciate that your free time is important. Therefore if you feel your code is unfinished please leave some notes in your README.md explaining what you would do next given more time. We are more than happy to review this.
 
 ## API
 
@@ -35,28 +34,26 @@ curl "https://search.moonpig.com/api/products?size=12&searchFacets=occasion_leve
 ### View Card
 
 ```
-curl "https://www.moonpig.com/uk/api/product/product/?mpn=pu1162&defaultSizeId=1"
+curl "https://www.moonpig.com/uk/api/product/product/?mpn=pu1162"
 ```
 
-> Note: replace pu1162 with the variable MoonpigProductNo from the first API call
+> Note: replace "pu1162" with the variable `MoonpigProductNo` from the first API call
 
 ## Tools, libraries and frameworks
 
-The choice of tools, libraries and frameworks used to develop the application is left open but you may want to consider using a front-end framework or library to help achieve this task (e.g. React) and a simple build process (e.g. Webpack).
+We are beginning to use React at Moonpig so ideally the exercise would also be written in React. However, it's not a deal breaker and we are happy to receive exercises written with your library of choice or even vanilla JS.
 
-It should be possible to statically host the application i.e. develop a single-page application and consider publishing to GitHub Pages or AWS S3.
+Primarily we will be looking at the application code itself - so it's fine to use something like [Parcel](https://parceljs.org/) or [Create React App](https://github.com/facebook/create-react-app) to bootstrap your build. But if tooling is your thing, there's bonus points for rolling your own build system with Webpack, Babel etc.
 
-The application will be tested on an up-to-date version of Chrome, but it should be compatible with most modern browsers: IE11+, Chrome, Firefox and Safari.
+It should be possible to statically host the application and it would be great to see it hosted on something like GitHub Pages or AWS S3.
 
 ## Assessment
+
 We will assess the task based on the following criteria:
 
-- How clean, modular and extensible the code is.
-Suitability of tools, libraries and frameworks used (for both the app itself and any build processes involved).
-- How it looks visually and the techniques used to style the application.
-- Responsive web design techniques used and the approach used for layout and accessibility.
-- Testing.
-- Anything above and beyond e.g. pagination, animation, routing, video playback etc.
-
-
-We appreciate your free time is important. Therefore if you feel your unfinished code demonstrates enough for us to assess the application please leave some notes in your README.md explaining what you would do next given more time. We would be happy to review this.
+- How clean, modular and extensible the code is
+- How it looks visually and the techniques used to style the application
+- Responsive web design techniques used
+- Accessibility
+- Approach to testing
+- Anything that goes above and beyond
