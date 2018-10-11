@@ -37,7 +37,7 @@ curl "https://search.moonpig.com/api/products?size=12&searchFacets=occasion_leve
 curl "https://www.moonpig.com/uk/api/product/product/?mpn=pu1162"
 ```
 
-> Note: replace "pu1162" with the variable `MoonpigProductNo` from the first API call
+> Note: replace `pu1162` with the variable `MoonpigProductNo` from the first API call
 
 ## Tools, libraries and frameworks
 
