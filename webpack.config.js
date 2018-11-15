@@ -74,7 +74,11 @@ module.exports = {
 			{
 				test: /\.eot$/,
 				loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]'
-			}
+            },
+            {
+                test: /\.png$/,
+                loader: 'file-loader?limit=65000&mimetype=application/png&name=img/[name].[ext]'
+            }
 		]
 	},
 
