@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "test": "jest --config ./jest.config.js",
+    "test:dev": "jest --config ./jest.config.js --updateSnapshot",
     "dev": "webpack && webpack-dev-server"
   },
   "repository": {
