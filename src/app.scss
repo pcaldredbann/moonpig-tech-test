@@ -1,8 +1,15 @@
+#content {
+    padding: 1em;
+    margin-bottom: 100px;
+}
+
 #footer {
     position: fixed;
     bottom: 0;
-    min-height: 150px;
+    min-height: 100px;
     background-color: #333;
     width: 100%;
     color: #fff;
+    padding: 2em;
+    font-size: 9px;
 }
