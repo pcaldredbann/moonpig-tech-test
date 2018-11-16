@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class TextBlock extends Component {
     constructor(args) {
@@ -18,6 +19,11 @@ class TextBlock extends Component {
 
 		return <p>{this.props.text}</p>;
 	}
+}
+
+TextBlock.propTypes = {
+    text: PropTypes.string.isRequired,
+    config: PropTypes.object.isRequired
 }
 
 TextBlock.defaultProps = {

@@ -3,9 +3,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template: __dirname + '/public/index.html',
-    filename: 'index.html',
-    inject: 'body'
+	template: __dirname + '/public/index.html',
+	filename: 'index.html',
+	inject: 'body'
 });
 
 module.exports = {
@@ -13,9 +13,9 @@ module.exports = {
 		main: './src/index.js'
 	},
 
-    target: 'web',
-    
-    mode: 'development',
+	target: 'web',
+
+	mode: 'development',
 
 	module: {
 		rules: [
@@ -23,6 +23,11 @@ module.exports = {
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: ['babel-loader']
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: ['babel-loader', 'eslint-loader']
 			},
 			{
 				test: /\.css$/,
@@ -74,11 +79,11 @@ module.exports = {
 			{
 				test: /\.eot$/,
 				loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]'
-            },
-            {
-                test: /\.png$/,
-                loader: 'file-loader?limit=65000&mimetype=application/png&name=img/[name].[ext]'
-            }
+			},
+			{
+				test: /\.png$/,
+				loader: 'file-loader?limit=65000&mimetype=application/png&name=img/[name].[ext]'
+			}
 		]
 	},
 
@@ -96,8 +101,8 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({
-            filename: 'bundle.css'
-        }),
+			filename: 'bundle.css'
+		}),
 		HTMLWebpackPluginConfig
 	],
 

@@ -61,7 +61,18 @@ export default class App extends Component {
                             <h2>Moonpig.com</h2>
                         </div>
                         <div className="col-md-6 text-center">
-                            <p>10 Back Hill, London EC1R 5EN, UK, Earth, Solar System, Orion Spiral Arm, Milky Way Galaxy, Local Group, Virgo Super Cluster, The Universe</p>
+                            <p>
+                                10 Back Hill,
+                                London EC1R 5EN,
+                                UK,
+                                Earth,
+                                Solar System,
+                                Orion Spiral Arm,
+                                Milky Way Galaxy,
+                                Local Group,
+                                Virgo Super Cluster,
+                                The Universe
+                            </p>
                         </div>
                     </div>
                 </div>

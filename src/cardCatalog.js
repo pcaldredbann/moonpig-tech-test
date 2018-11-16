@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Row } from 'reactstrap';
 import CardItem from './cardItem';
 import './cardCatalog.scss';
 
-export default class CardCatalog extends Component {
+class CardCatalog extends Component {
 	constructor(args) {
 		super(args);
 	}
@@ -20,3 +21,9 @@ export default class CardCatalog extends Component {
 		);
 	}
 }
+
+CardCatalog.propTypes = {
+    products: PropTypes.array.isRequired
+};
+
+export default CardCatalog;
