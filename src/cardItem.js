@@ -3,7 +3,7 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Col } from '
 import TextBlock from './components/textBlock';
 const TextBlockConfig = {
     config: {
-        limit: 25
+        limit: 150
     }
 };
 
