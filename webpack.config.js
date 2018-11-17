@@ -1,9 +1,12 @@
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: __dirname + '/public/index.html',
+	template: path.join(__dirname, '/public/index.html'),
 	filename: 'index.html',
 	inject: 'body'
 });
@@ -50,9 +53,7 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							plugins: function() {
-								return [require('precss'), require('autoprefixer')];
-							}
+							plugins: () => [precss, autoprefixer]
 						}
 					},
 					{
@@ -92,7 +93,7 @@ module.exports = {
 	},
 
 	output: {
-		path: __dirname + '/dist',
+		path: path.join(__dirname, '/dist'),
 		publicPath: '/',
 		filename: 'bundle.js',
 		pathinfo: false

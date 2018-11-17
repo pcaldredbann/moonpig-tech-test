@@ -1,13 +1,83 @@
 {
 	"parser": "babel-eslint",
-	"plugins": ["react"],
+	"plugins": [
+		"react",
+		"jsx-a11y",
+		"import"
+	],
 	"rules": {
-		"max-len": [1, 120, 2, { "ignoreComments": true }],
-		"react/prop-types": [2]
-    },
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "env": {
-        "browser": true,
-        "es6": true
-    }
+		"react/prop-types": [
+			2
+		],
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"react/destructuring-assignment": [
+			0,
+			"never",
+			{
+				"ignoreClassFields": true
+			}
+		],
+		"react/forbid-prop-types": "off",
+		"react/jsx-indent": [
+			2,
+			"tab"
+		],
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"import/newline-after-import": [
+			"error",
+			{
+				"count": 1
+			}
+		],
+		"max-len": [
+			1,
+			120,
+			2,
+			{
+				"ignoreComments": true
+			}
+		],
+		"indent": [
+			2,
+			"tab"
+		],
+		"no-tabs": 0,
+		"comma-dangle": "off",
+		"eol-last": "off"
+	},
+	"extends": [
+		"airbnb",
+		"eslint:recommended",
+		"plugin:react/recommended"
+	],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"settings": {
+		"react": {
+			"pragma": "react",
+			"version": "16.0"
+		}
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	}
 }

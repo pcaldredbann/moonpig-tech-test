@@ -1,16 +1,16 @@
 module.exports = {
-        
-    transform: {
+
+	transform: {
 		'^.+\\.(js|jsx)?$': 'babel-jest'
-    },
+	},
 
-    verbose: true,
+	verbose: true,
 
-    roots: ['./'],
+	roots: ['./'],
 
-    moduleNameMapper: {
-        "\\.(css|less|sass|scss)$": "<rootDir>mocks/styleMock.js",
-        "\\.(gif|ttf|eot|svg|png)$": "<rootDir>mocks/fileMock.js"
-    }
+	moduleNameMapper: {
+		'\\.(css|less|sass|scss)$': '<rootDir>mocks/styleMock.js',
+		'\\.(gif|ttf|eot|svg|png)$': '<rootDir>mocks/fileMock.js'
+	}
 
 };

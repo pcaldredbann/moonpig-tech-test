@@ -1,35 +1,34 @@
-import React, { Component } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class TextBlock extends Component {
-    constructor(args) {
-        super(args);
-
-        this.isCollapsable = this.isCollapsable.bind(this);
-    }
+class TextBlock extends PureComponent {
+	constructor(args) {
+		super(args);
+	}
 
 	isCollapsable(text, limit) {
 		return text && text.length > limit;
 	}
 
 	render() {
-		if (this.isCollapsable(this.props.text, this.props.config.limit)) {
-			return <p>{this.props.text.substring(0, this.props.config.limit).trim() + '...'}</p>;
+		const {
+			text,
+			config: { limit }
+		} = this.props;
+
+		if (this.isCollapsable(text, limit)) {
+			const truncated = text.substring(0, limit).trim();
+			return <p>{truncated}</p>;
 		}
 
-		return <p>{this.props.text}</p>;
+		return <p>{text}</p>;
 	}
 }
 
 TextBlock.propTypes = {
-    text: PropTypes.string.isRequired,
-    config: PropTypes.object.isRequired
-}
-
-TextBlock.defaultProps = {
-    config: {
-        limit: 10
-    }
+	text: PropTypes.string.isRequired,
+	config: PropTypes.object.isRequired
 };
 
 export default TextBlock;
