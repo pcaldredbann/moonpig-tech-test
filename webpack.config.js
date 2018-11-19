@@ -27,11 +27,11 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ['babel-loader']
 			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: ['babel-loader', 'eslint-loader']
-			},
+			// {
+			// 	test: /\.js$/,
+			// 	exclude: /node_modules/,
+			// 	use: ['babel-loader', 'eslint-loader']
+			// },
 			{
 				test: /\.css$/,
 				use: [
@@ -112,6 +112,15 @@ module.exports = {
 		hot: true,
 		compress: true,
 		port: 9000,
-		open: true
-	}
+		open: true,
+		proxy: {
+			'/api': {
+				target: 'https://search.moonpig.com',
+				secure: false,
+				changeOrigin: true
+			}
+		}
+	},
+
+	devtool: 'source-map'
 };

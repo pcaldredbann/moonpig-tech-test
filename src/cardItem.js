@@ -2,46 +2,32 @@
 import React, { PureComponent } from 'react';
 import {
 	Card,
-	CardBody,
-	CardTitle,
-	CardSubtitle,
-	CardText,
-	Button,
-	Col
+	Col,
+	CardImg
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import TextBlock from './components/textBlock';
-
-const TextBlockConfig = {
-	config: {
-		limit: 150
-	}
-};
+import './cardItem.scss';
 
 class CardItem extends PureComponent {
+
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-			<Col sm="6">
+			<Col sm={4}>
 				<Card>
-					<CardBody>
-						<CardTitle>{this.props.product.name}</CardTitle>
-						<CardSubtitle>{this.props.product.subTitle}</CardSubtitle>
-					</CardBody>
-					<img width="100%" src={this.props.product.thumbnail} alt="" />
-					<CardBody>
-						<CardText>
-							<TextBlock text={this.props.product.description} {...TextBlockConfig} />
-						</CardText>
-						<Button className="btn btn-success col-md-6">Buy Now</Button>
-					</CardBody>
+					<CardImg src={this.props.imageUrl} />
 				</Card>
 			</Col>
 		);
 	}
+
 }
 
 CardItem.propTypes = {
-	product: PropTypes.object.isRequired
+	imageUrl: PropTypes.string.isRequired
 };
 
 export default CardItem;

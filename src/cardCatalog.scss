@@ -1,3 +1,14 @@
 .card {
     margin-bottom: 1em;
 }
+
+.card-catalog-item {
+	> div {
+		margin: 1em auto;
+
+		img {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}

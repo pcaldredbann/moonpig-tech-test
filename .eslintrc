@@ -31,6 +31,10 @@
 			2,
 			"tab"
 		],
+		"react/jsx-indent-props": [
+			2,
+			"tab"
+		],
 		"import/no-extraneous-dependencies": [
 			"error",
 			{
@@ -57,7 +61,8 @@
 		],
 		"no-tabs": 0,
 		"comma-dangle": "off",
-		"eol-last": "off"
+		"eol-last": "off",
+		"no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
 	},
 	"extends": [
 		"airbnb",
