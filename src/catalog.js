@@ -39,10 +39,6 @@ export default class Catalog extends PureComponent {
 		this.handleSearch = this.handleSearch.bind(this);
 	}
 
-	componentWillMount() {
-		this.getCatalogList();
-	}
-
 	async getCatalogList() {
 		let query = {
 			size: this.state.pageSize,
@@ -56,7 +52,7 @@ export default class Catalog extends PureComponent {
 			delete query.q;
 		}
 
-		const response = await fetch(`/api/products?${qs.stringify(query)}`, { mode: 'no-cors' });
+		const response = await fetch(`${process.env.SEARCH_API_URL}/api/products?${qs.stringify(query)}`, { mode: 'no-cors' });
 		const responseBody = await response.json();
 
 		this.setState({
@@ -76,10 +72,12 @@ export default class Catalog extends PureComponent {
 	}
 
 	handleSearch(e) {
-		this.setState({
-			query: e.target.value,
-			isLoading: true
-		}, this.getCatalogList);
+		if (this.state.query !== e.target.value) {
+			this.setState({
+				query: e.target.value,
+				isLoading: true
+			}, this.getCatalogList);
+		}
 	}
 
 	render() {

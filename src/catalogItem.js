@@ -40,7 +40,7 @@ export default class CatalogItem extends PureComponent {
 
 	async componentDidMount() {
 		const productId = this.props.match.params.productId;
-		const response = await fetch(`/uk/api/product/product/?mpn=${productId}`, { mode: 'no-cors' });
+		const response = await fetch(`${process.env.PRODUCT_API_URL}/uk/api/product/product/?mpn=${productId}`, { mode: 'no-cors' });
 		const json = await response.text();
 		const moonpigProduct = JSON.parse(json);
 

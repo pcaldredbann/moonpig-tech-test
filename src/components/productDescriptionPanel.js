@@ -21,7 +21,7 @@ export default class componentName extends Component {
 		} = this.props;
 
 		return (
-			<p dangerouslySetInnerHTML={this.setDangerousAbstract(text)}></p>
+			<p dangerouslySetInnerHTML={this.setDangerousAbstract(text)} />
 		)
 	}
 }
