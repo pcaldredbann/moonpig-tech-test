@@ -25,7 +25,7 @@ module.exports = () => {
 
 		target: 'web',
 
-		mode: process.env.NODE_ENV,
+		mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
 		module: {
 			rules: [
