@@ -12,9 +12,10 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-	entry: {
-		main: './src/index.js'
-	},
+	entry: [
+		'babel-polyfill',
+		'./src/index.js'
+	],
 
 	target: 'web',
 
@@ -109,13 +110,20 @@ module.exports = {
 
 	devServer: {
 		contentBase: './dist',
+		publicPath: '/',
 		hot: true,
 		compress: true,
 		port: 9000,
 		open: true,
+		historyApiFallback: true,
 		proxy: {
 			'/api': {
 				target: 'https://search.moonpig.com',
+				secure: false,
+				changeOrigin: true
+			},
+			'/uk/api/product/product': {
+				target: 'https://www.moonpig.com',
 				secure: false,
 				changeOrigin: true
 			}
@@ -123,4 +131,5 @@ module.exports = {
 	},
 
 	devtool: 'source-map'
+
 };

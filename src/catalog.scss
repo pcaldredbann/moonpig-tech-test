@@ -1,0 +1,27 @@
+.card {
+    margin-bottom: 1em;
+}
+
+.card-catalog-item {
+	> div {
+		margin: 1em auto;
+
+		img {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+$start: 1;
+$end: 10;
+@for $i from $start through $end {
+	.spacer-#{$i} {
+		min-height: #{$i}em;
+		height: #{$i}em;
+	}
+}
+
+.pagination {
+	flex-wrap: wrap;
+}

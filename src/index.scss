@@ -1,6 +1,8 @@
 $body-bg: #ECE4B7;
 $body-color: #111;
-@import "~bootstrap/scss/bootstrap";
+
+@import "~bootstrap/scss/bootstrap.scss";
+
 .bg-brand {
     background-color: #fff;
 }
