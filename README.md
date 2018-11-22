@@ -10,9 +10,12 @@ Ideally, I would produce a `express` (or other technology) backend that would ac
 While there is still so much left that I would like to have completed, the main features provided are:
 
 1. SPA style routing
-2. Product searching via the provided API
-3. Basic pagination
-4. Product view page showing mutiple available sizes and prices
+2. Responsive layout (using Bootstrap), so it scales well on computers and mobile devices alike
+3. Extensible React components and stylesheets using babel transpilation and CSS SASS
+3. Custom made stack, created from the ground up without leveraging `create-react-app`
+4. Product searching via the provided API
+5. Basic pagination
+6. Product view page showing mutiple available sizes and prices
 
 ### How To Get Up & Running
 
